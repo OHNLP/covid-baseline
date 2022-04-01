@@ -98,7 +98,7 @@ jobs:
           org.opencontainers.image.licenses=${{ github.event.repository.license.name }}
     - name: Docker Hub Description
       if: steps.prep.outputs.push == 'true'
-      uses: peter-evans/dockerhub-description@v2
+      uses: peter-evans/dockerhub-description@v3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
